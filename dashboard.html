@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bs/css/bootstrap.css">
+  <link rel="shortcut icon" href="Galerry/logo amikom.png">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,600,700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #fff;
+      margin: 0;
+      padding: 0 15px 80px;
+    }
+
+    .header {
+      padding: 15px 0 5px;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .notif-icon {
+      float: right;
+      font-size: 18px;
+    }
+
+    .profile-box {
+      border: 1px solid #d4aaff;
+      border-radius: 20px;
+      padding: 15px;
+      text-align: left;
+      margin-bottom: 25px;
+      position: relative;
+    }
+
+    .profile-status {
+      background: #d7f7d4;
+      color: #000;
+      border-radius: 20px;
+      padding: 5px 20px;
+      font-size: 13px;
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    .profile-image {
+      width: 60px;
+      height: 60px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 2px solid #caa7e4;
+      cursor: pointer;
+      position: absolute;
+      top: 15px;
+      right: 15px;
+    }
+
+    .section-title {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .internship-card {
+      background: #dab9f4;
+      padding: 15px;
+      border-radius: 15px;
+      margin-bottom: 15px;
+    }
+
+    .internship-card .btn {
+      background-color: #d9f7cf;
+      color: black;
+      border: none;
+      font-weight: bold;
+      padding: 5px 15px;
+      font-size: 12px;
+      border-radius: 10px;
+    }
+
+    .internship-card p {
+      margin: 5px 0;
+      font-size: 13px;
+    }
+
+    .see-more {
+      text-align: right;
+      font-size: 13px;
+      color: black;
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin-top: 15px;
+    }
+
+    .menu-item {
+      text-align: center;
+      font-size: 12px;
+    }
+
+    .menu-icon {
+      width: 50px;
+      height: 50px;
+      background-color: #d4aaff;
+      border-radius: 10px;
+      margin: 0 auto 5px;
+    }
+
+    .footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      border-top: 1px solid #ccc;
+      background: #fff;
+      display: flex;
+      justify-content: space-around;
+      padding: 10px 0;
+    }
+
+    .footer i {
+      font-size: 18px;
+    }
+
+    input[type="file"] {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    Good Morning!
+    <span class="notif-icon glyphicon glyphicon-bell"></span>
+  </div>
+
+  <div class="profile-box">
+    <p>Halo, Senja Maharani</p>
+    <p>24.01.23xx</p>
+    <div class="profile-status">Aktif</div>
+
+    <label for="profile-upload">
+      <img id="profile-picture" src="default-profile.png" alt="Profile" class="profile-image">
+    </label>
+    <input type="file" id="profile-upload" accept="image/*">
+  </div>
+
+  <div class="section-title">Internship Information</div>
+  <div class="internship-card">
+  <strong>NexByte Digital</strong>
+  <p>Posisi <span style="float:right;">Full Stack Developer</span></p>
+  <p>Durasi <span style="float:right;">6 bulan</span></p>
+  <p>Lokasi <span style="float:right;">Sleman, Yogyakarta</span></p>
+  <p>Insentif <span style="float:right;">1,8jt – 2,2jt</span></p>
+  <div class="text-right" style="margin-top:10px;">
+    <a href="internship details.html" class="btn">Details</a>
+  </div>
+  </div>
+
+  <div class="see-more">
+  <a href="internship page.html" class="text-dark text-decoration-none">See More &gt;</a>
+</div>
+
+  <div class="menu-grid">
+  <a href="monitoring.html" class="menu-item text-decoration-none" style="color: black;">
+    <div class="menu-icon" style="background-color: #d4aaff;">
+      <img src="Galerry/mentoring.png" alt="Monitoring" style="width: 30px; height: 30px; margin-top: 10px;">
+    </div>
+    Monitoring
+  </a>
+  <a href="intern report.html" class="menu-item text-dark text-decoration-none" style="color: #000;">
+    <div class="menu-icon" style="background-color: #d4aaff;">
+      <img src="Galerry/reports.png" alt="Intern Report" style="width: 30px; height: 30px; margin-top: 10px;">
+    </div>
+    Intern Report
+  </a>
+  <a href="rating.html" class="menu-item text-dark text-decoration-none" style="color: #000;">
+    <div class="menu-icon" style="background-color: #d4aaff;">
+      <img src="Galerry/rating.png" alt="Rating" style="width: 30px; height: 30px; margin-top: 10px;">
+    </div>
+    Rating
+  </a>
+  <a href="certificate.html" class="menu-item text-dark text-decoration-none" style="color: #000;">
+    <div class="menu-icon" style="background-color: #d4aaff;">
+      <img src="Galerry/Certificate.png" alt="Certificate" style="width: 30px; height: 30px; margin-top: 10px;">
+    </div>
+    Certificate
+  </a>
+  <a href="prodi.html" class="menu-item text-dark text-decoration-none" style="color: #000;">
+    <div class="menu-icon" style="background-color: #d4aaff;">
+      <img src="Galerry/prodi.png" alt="Prodi" style="width: 30px; height: 30px; margin-top: 10px;">
+    </div>
+    Prodi
+  </a>
+  </div>
+
+
+  <div class="footer">
+  <a href="dashboard.html">
+    <img src="Galerry/home.png" alt="Home" style="width:24px; height:24px;">
+  </a>
+  <a href="internship page.html">
+    <img src="Galerry/search.png" alt="List" style="width:24px; height:24px;">
+  </a>
+  <a href="application.html">
+    <img src="Galerry/write.png" alt="Edit" style="width:24px; height:24px;">
+  </a>
+  <a href="profile.html">
+    <img src="Galerry/profile.png" alt="Profile" style="width:24px; height:24px;">
+  </a>
+ </div>
+
+  <script>
+    document.getElementById("profile-upload").addEventListener("change", function (event) {
+      const file = event.target.files[0];
+      if (file) {
+        const img = document.getElementById("profile-picture");
+        img.src = URL.createObjectURL(file);
+      }
+    });
+  </script>
+
+</body>
+</html>

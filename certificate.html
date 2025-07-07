@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Certificate</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bs/css/bootstrap.css">
+  <link rel="shortcut icon" href="Galerry/logo amikom.png">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,600,700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #F8F5FB;
+      margin: 0;
+      padding: 0;
+    }
+
+    .header {
+      background-color: #B7A0C5;
+      color: white;
+      padding: 10px 15px;
+      display: flex;
+      align-items: center;
+    }
+
+    .header .glyphicon {
+      color: white;
+      margin-right: 10px;
+    }
+
+    .header h4 {
+      margin: 0;
+    }
+
+    .certificate-container {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .certificate-box {
+      border-radius: 15px;
+      background-color: #fff;
+      padding: 25px;
+      margin-bottom: 20px;
+    }
+
+    .certificate-title {
+      font-family: 'Cursive', sans-serif;
+      color: #8849A3;
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .certificate-name {
+      font-weight: bold;
+      color: #8849A3;
+      font-size: 20px;
+    }
+
+    .certificate-text {
+      font-size: 13px;
+      color: #555;
+      margin: 15px 0;
+    }
+
+    .certificate-score {
+      font-size: 30px;
+      font-weight: bold;
+      color: #555;
+      margin: 10px 0;
+    }
+
+    .certificate-footer {
+      margin-top: 20px;
+      font-size: 12px;
+    }
+
+    .signature {
+      margin-top: 20px;
+    }
+
+    .print-btn {
+      width: 90%;
+      max-width: 300px;
+      margin: 0 auto 20px auto;
+      background-color: #B7A0C5;
+      color: white;
+      border-radius: 10px;
+      border: none;
+      padding: 10px;
+      font-size: 16px;
+    }
+
+    .footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      border-top: 1px solid #ccc;
+      background: #fff;
+      display: flex;
+      justify-content: space-around;
+      padding: 10px 0;
+    }
+
+    .footer i {
+      font-size: 18px;
+    }
+
+    @media print {
+      body * {
+        visibility: hidden;
+      }
+      #certificateToPrint, #certificateToPrint * {
+        visibility: visible;
+      }
+      #certificateToPrint {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <a href="javascript:history.back()"><span class="glyphicon glyphicon-chevron-left"></span></a>
+    <h4>Certificate</h4>
+  </div>
+
+  <div class="certificate-container">
+    <div id="certificateToPrint" class="certificate-box">
+      <img src="Galerry/logo amikom.png" width="40" alt="Logo" />
+      <div class="certificate-title">Certificate</div>
+      <div class="certificate-text">This is to certify that</div>
+      <div class="certificate-name">Senja Maharani</div>
+      <div class="certificate-text">
+        has successfully completed an internship at CyberCore System from September 2024 to January 2025 and has demonstrated excellent performance, with final score of
+      </div>
+      <div class="certificate-score">80</div>
+      <div class="certificate-footer">Yogyakarta, 27 February 2025<br>Direktur</div>
+      <div class="signature">
+        <img src="Galerry/signature.jpg" width="100" alt="Signature"/>
+        <div>Andi Setiawan</div>
+      </div>
+    </div>
+
+    <p>Your internship certificate is ready to be printed.</p>
+    <button class="print-btn" onclick="window.print()">Print</button>
+  </div>
+
+  <div class="footer">
+  <a href="dashboard.html">
+    <img src="Galerry/home.png" alt="Home" style="width:24px; height:24px;">
+  </a>
+  <a href="internship page.html">
+    <img src="Galerry/search.png" alt="List" style="width:24px; height:24px;">
+  </a>
+  <a href="application.html">
+    <img src="Galerry/write.png" alt="Edit" style="width:24px; height:24px;">
+  </a>
+  <a href="profile.html">
+    <img src="Galerry/profile.png" alt="Profile" style="width:24px; height:24px;">
+  </a>
+  </div>
+
+</body>
+</html>

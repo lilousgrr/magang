@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Company Rating</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="Galerry/logo amikom.png">
+  <link rel="stylesheet" href="bs/css/bootstrap.css">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,600,700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background-color: #fff;
+    }
+
+    .header {
+      background-color: #a58ab3;
+      color: white;
+      padding: 10px 15px;
+      text-align: center;
+      font-weight: bold;
+      position: relative;
+    }
+
+    .header .glyphicon {
+      position: absolute;
+      left: 15px;
+      top: 12px;
+    }
+    
+    .header h4 {
+      margin: 0;
+    }
+
+    .container {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .rating .star {
+      font-size: 30px;
+      color: #ddd;
+      cursor: pointer;
+    }
+
+    .rating .star.selected,
+    .rating .star.hovered {
+      color: gold;
+    }
+
+    textarea {
+      width: 100%;
+      height: 150px;
+      border-radius: 15px;
+      padding: 10px;
+      border: none;
+      background-color: #EADAF5;
+      resize: none;
+      color: #333;
+      font-size: 14px;
+    }
+
+    .submit-btn {
+      width: 100%;
+      margin-top: 15px;
+      background-color: #B7A0C5;
+      color: white;
+      border-radius: 10px;
+      border: none;
+      padding: 10px;
+      font-size: 16px;
+    }
+
+    .footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      border-top: 1px solid #ccc;
+      background: #fff;
+      display: flex;
+      justify-content: space-around;
+      padding: 10px 0;
+    }
+
+    .footer i {
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <a href="javascript:history.back()"><span class="glyphicon glyphicon-chevron-left"></span></a>
+      Application
+    </div>
+
+  <div class="container">
+    <h4><strong>Cybercore System</strong></h4>
+
+    <div class="rating" id="ratingStars">
+      <span class="star glyphicon glyphicon-star-empty" data-value="1"></span>
+      <span class="star glyphicon glyphicon-star-empty" data-value="2"></span>
+      <span class="star glyphicon glyphicon-star-empty" data-value="3"></span>
+      <span class="star glyphicon glyphicon-star-empty" data-value="4"></span>
+      <span class="star glyphicon glyphicon-star-empty" data-value="5"></span>
+    </div>
+
+    <div class="form-group text-left" style="margin-top: 20px;">
+      <label for="feedback">Feedback</label>
+      <textarea id="feedback" placeholder="write it here"></textarea>
+    </div>
+
+    <button class="submit-btn">Submit</button>
+  </div>
+
+  <div class="footer">
+    <a href="dashboard.html">
+      <img src="Galerry/home.png" alt="Home" style="width:24px; height:24px;">
+    </a>
+    <a href="internship page.html">
+      <img src="Galerry/search.png" alt="List" style="width:24px; height:24px;">
+    </a>
+    <a href="application.html">
+      <img src="Galerry/write.png" alt="Edit" style="width:24px; height:24px;">
+    </a>
+    <a href="profile.html">
+      <img src="Galerry/profile.png" alt="Profile" style="width:24px; height:24px;">
+    </a>
+   </div>
+
+  <script>
+    const stars = document.querySelectorAll('.star');
+    let currentRating = 0;
+
+    stars.forEach(star => {
+      star.addEventListener('click', () => {
+        currentRating = parseInt(star.getAttribute('data-value'));
+        updateStars();
+      });
+
+      star.addEventListener('mouseover', () => {
+        const hoverValue = parseInt(star.getAttribute('data-value'));
+        updateStars(hoverValue);
+      });
+
+      star.addEventListener('mouseout', () => {
+        updateStars();
+      });
+    });
+
+    function updateStars(hoverValue = 0) {
+      stars.forEach(star => {
+        const val = parseInt(star.getAttribute('data-value'));
+        if (hoverValue >= val || currentRating >= val) {
+          star.classList.add('selected');
+          star.classList.remove('glyphicon-star-empty');
+          star.classList.add('glyphicon-star');
+        } else {
+          star.classList.remove('selected');
+          star.classList.remove('glyphicon-star');
+          star.classList.add('glyphicon-star-empty');
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>

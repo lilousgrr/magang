@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Profile</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="bs/css/bootstrap.css">
+  <link rel="shortcut icon" href="Galerry/logo amikom.png">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,600,700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #fef9f9;
+      padding: 20px;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .card {
+      background-color: #f0e1f5;
+      border-radius: 15px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    .profile-image {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 2px solid #caa7e4;
+      cursor: pointer;
+      margin-bottom: 10px;
+    }
+
+    input[type="file"] {
+      display: none;
+    }
+
+    .title {
+      font-weight: bold;
+    }
+
+    .section-title {
+      font-weight: bold;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+
+    .approval-history .row > div {
+      padding: 10px;
+      margin-bottom: 5px;
+      border-radius: 10px;
+      background-color: #e4c6f0;
+    }
+
+    .status-menunggu {
+      color: #a07dca;
+    }
+
+    .status-diterima {
+      color: green;
+      font-weight: bold;
+    }
+
+    .status-ditolak {
+      color: red;
+      font-weight: bold;
+    }
+
+    .footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      border-top: 1px solid #ccc;
+      background: #fff;
+      display: flex;
+      justify-content: space-around;
+      padding: 10px 0;
+    }
+
+    .footer i {
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="card text-center">
+    <label for="profile-upload">
+      <img id="profile-picture" src="default-profile.png" alt="Profile" class="profile-image">
+    </label>
+    <input type="file" id="profile-upload" accept="image/*">
+    <h4>Senja Maharani</h4>
+    <p>Mahasiswa aktif<br>Universitas Amikom Yogyakarta<br>D3 Teknik Informatika</p>
+  </div>
+
+  <div class="card">
+    <p class="section-title">Personal Information</p>
+    <p><span class="title">Email:</span> senjamaha@gmail.com</p>
+    <p><span class="title">Telepon:</span> +62 897-6573-45x</p>
+    <p><span class="title">LinkedIn:</span> <a href="#">linkedin.com/in/senjamaha</a></p>
+  </div>
+
+  <div class="card">
+    <p class="section-title">Education</p>
+    <p><span class="title">Universitas:</span> Universitas Amikom Yogyakarta</p>
+    <p><span class="title">Prodi:</span> D3 Teknik Informatika</p>
+    <p><span class="title">Semester:</span> Semester 5 - 2022</p>
+    <p><span class="title">Certificate:</span> terlampir</p>
+  </div>
+
+  <div class="card approval-history">
+    <p class="section-title">Approval History</p>
+    <div class="row">
+      <div class="col-xs-12">
+        <strong>CodeNova Tech.</strong> <span class="pull-right status-menunggu">Menunggu</span>
+      </div>
+      <div class="col-xs-12">
+        <strong>CyberCore System</strong> <span class="pull-right status-diterima">Diterima</span>
+      </div>
+      <div class="col-xs-12">
+        <strong>DataNest Analyst</strong> <span class="pull-right status-ditolak">Ditolak</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <a href="dashboard.html">
+    <img src="Galerry/home.png" alt="Home" style="width:24px; height:24px;">
+  </a>
+  <a href="internship page.html">
+    <img src="Galerry/search.png" alt="List" style="width:24px; height:24px;">
+  </a>
+  <a href="application.html">
+    <img src="Galerry/write.png" alt="Edit" style="width:24px; height:24px;">
+  </a>
+  <a href="profile.html">
+    <img src="Galerry/profile.png" alt="Profile" style="width:24px; height:24px;">
+  </a>
+ </div>
+
+<script>
+  document.getElementById("profile-upload").addEventListener("change", function (event) {
+    const file = event.target.files[0];
+    if (file) {
+      const img = document.getElementById("profile-picture");
+      img.src = URL.createObjectURL(file);
+    }
+  });
+</script>
+
+</body>
+</html>
